@@ -1,11 +1,21 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
-void dfs()
+void dfs(int node, vector<int> graph[], int &visited[], stack<int> &cycle)
 {
 }
-vector<int> cycle(vector<int> graph[], int n, int m)
+vector<int> findCycle(vector<int> graph[], int n, int m)
 {
+    stack<int> cycle;
+    vector<int> visited(n, 0);
+    for (int i = 0; i < n; ++i)
+    {
+        if (!visited[i])
+        {
+            dfs(i, graph, visited, cycle)
+        }
+    }
 }
 int main()
 {
@@ -21,7 +31,7 @@ int main()
         graph[v - 1].push_back(u - 1);
     }
     // output
-    int ans = cycle(graph, n, m);
+    int ans = findCycle(graph, n, m);
     for (int i = 0; i < ans.size(); i++)
     {
         cout << ans[i] << " ";
