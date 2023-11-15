@@ -1,0 +1,1 @@
+#These are the answers to the 2cnd Discrete Structures for Computer Science Assignment which part of the course Discret Structures for Computer Science offered to 2cnd year CS students as BITS Pilani University
